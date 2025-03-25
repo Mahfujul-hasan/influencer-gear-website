@@ -65,6 +65,7 @@
   .banner-description{
     font-size: 1rem;
     font-weight: 600;
+    max-width: 505px;
   }
   .banner-image img{
     width: 100%;
@@ -84,11 +85,14 @@
   .companies{
     border-top: 1px solid rgba(192, 204, 218, 0.6);
     border-bottom: 1px solid rgba(192, 204, 218, 0.6);
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    align-items: center;
     gap: 60px;
-    max-width: 1110px;
+    margin: 0px auto;
     padding: 35px;
   }
+  
   /* popular collection related styles  */
   .collection{
     margin-top: 100px;
@@ -192,4 +196,56 @@
     gap: 16px;
     margin-top: 0px;
     padding-bottom: 20px;
+  }
+
+  @media screen and (max-width:576px) {
+    nav{
+      flex-direction: column;
+    }
+    header{
+      margin: 20px;
+    }
+    .banner{
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 0px;
+
+    }
+    .banner-title{
+      font-size: 1.7rem;
+      font-weight: 700;
+    }
+    .banner-description{
+      font-size: 0.875rem;
+      font-weight: 600;
+      
+    }
+    main{
+      margin: 20px;
+    }
+    .companies{
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      border: none;
+    }
+    .card-items{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .feature{
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 20px;
+    }
+    .feature-title{
+      font-size: 1.5rem;
+    }
+    .feature-description{
+      font-size: 1rem;
+      display: inline-block;
+    }
+
+
+    
+    
+    
   }
